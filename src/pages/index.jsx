@@ -127,7 +127,7 @@ const ContactText = styled.p`
 
 const Footer = styled.footer`
   ${tw("text-center text-grey absolute pin-b p-6 font-sans")};
-  font-size: 0.75rem;
+  font-size: 0.65rem;
   a {
     color: #e07628;
     text-decoration: none;
