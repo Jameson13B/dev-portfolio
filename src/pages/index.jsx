@@ -182,51 +182,52 @@ const Index = () => (
               A web app that helps distributed or remote teams with real-time document collaboration and scheduling meetings. 
               Team Communicator is built with a React/Redux frontend (deployed to Netlify) and Node/Express backend (deployed to Heroku).
               <br/><br/>
-              GitHub: <a href="https://git.io/fpdlk">https://git.io/fpdlk</a>
+              GitHub: <a href="https://git.io/fpdlk" style={{color: white}}>GitHub</a>
             </ProjectCard>
             {/* Project */}
             <ProjectCard
               title="Game of Life"
-              link="https://www.behance.net/gallery/52915793/Harry-Potter"
+              link="https://gameoflifereact.netlify.com/"
               bg="linear-gradient(to right, #662D8C 0%, #ED1E79 100%)"
             >
               A web app that emulates John Conway’s Game of Life. A grid of cells(alive or dead) that can be manually populated or with templates. 
               The cells then advance based on a set of rules that govern their replication and destruction. Includes features like variable speed settings, 
               objects that reach end of screen wrap, and more. Created with React and CSS.
               <br/><br/>
-              <a href="https://git.io/fpdlq">GitHub</a>
+              <a href="https://git.io/fpdlq" style={{color: white}}>GitHub</a>
             </ProjectCard>
             {/* Project */}
             <ProjectCard
               title="ReactJack 21"
-              link="https://www.behance.net/gallery/43907099/Tomb-Raider"
+              link="https://reactjack.netlify.com/"
               bg="linear-gradient(to right, #009245 0%, #FCEE21 100%)"
             >
               A blackjack web app created with React and the Deck of Cards API by Chase Roberts. Global state is currently being added with ReactN.
               <br/><br/>
-              GitHub: <a href="https://git.io/fpdlk">https://git.io/fpdlk</a>
+              <a href="https://git.io/fpdlO" style={{color: white}}>GitHub</a>
             </ProjectCard>
             {/* Project */}
             <ProjectCard
               title="Da' Notes"
-              link="https://www.behance.net/gallery/38068151/Eagle"
+              link="https://da-notes.netlify.com/"
               bg="linear-gradient(to right, #D585FF 0%, #00FFEE 100%)"
             >
               Da' Notes is a web app created to create, edit, copy, and delete notes. All notes are served in a SQLite database so notes can be accessed 
-              from anywhere an internet connection is available.
+              from anywhere an internet connection is available. Created with React on front end and Python/Django on back end.
               <br/><br/>
-              GitHub: <a href="https://git.io/fpdlk">https://git.io/fpdlk</a>
+              <a href="https://git.io/fpdl3" style={{color: white}}>GitHub: Client</a>
+              <a href="https://git.io/fpdlG" style={{color: white}}>GitHub: Server</a>
             </ProjectCard>
             {/* Project */}
             <ProjectCard
               title="Connie's Country Western Pub"
-              link="https://www.behance.net/gallery/38068151/Eagle"
+              link="https://conniespub.netlify.com/"
               bg="linear-gradient(to right, #D4145A 0%, #FBB03B 100%)"
             >
               Connie is a hard working entrepenuer in Negril, Jamaica and one of my personal friends. Visiting with Connie in here pub one day she expressed 
               her desire for a website for her business. As my gift to my friend and one of my favorite projects, this site was created.
               <br/><br/>
-              GitHub: <a href="https://git.io/fpdlk">https://git.io/fpdlk</a>
+              <a href="https://github.com/Jameson13B/connies-pub" style={{color: white}}>GitHub</a>
             </ProjectCard>
             <ProjectCard
               title="Hacker Noon: Publication"
