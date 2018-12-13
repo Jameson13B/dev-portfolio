@@ -173,6 +173,7 @@ const Index = () => (
         <Inner>
           <Title>Projects</Title>
           <ProjectsWrapper>
+            {/* Project */}
             <ProjectCard
               title="Team Communicators"
               link="https://team-comm.netlify.com"
@@ -183,6 +184,7 @@ const Index = () => (
               <br/><br/>
               GitHub: <a href="https://git.io/fpdlk">https://git.io/fpdlk</a>
             </ProjectCard>
+            {/* Project */}
             <ProjectCard
               title="Game of Life"
               link="https://www.behance.net/gallery/52915793/Harry-Potter"
@@ -191,14 +193,20 @@ const Index = () => (
               A web app that emulates John Conway’s Game of Life. A grid of cells(alive or dead) that can be manually populated or with templates. 
               The cells then advance based on a set of rules that govern their replication and destruction. Includes features like variable speed settings, 
               objects that reach end of screen wrap, and more. Created with React and CSS.
+              <br/><br/>
+              <a href="https://git.io/fpdlq">GitHub</a>
             </ProjectCard>
+            {/* Project */}
             <ProjectCard
               title="ReactJack 21"
               link="https://www.behance.net/gallery/43907099/Tomb-Raider"
               bg="linear-gradient(to right, #009245 0%, #FCEE21 100%)"
             >
               A blackjack web app created with React and the Deck of Cards API by Chase Roberts. Global state is currently being added with ReactN.
+              <br/><br/>
+              GitHub: <a href="https://git.io/fpdlk">https://git.io/fpdlk</a>
             </ProjectCard>
+            {/* Project */}
             <ProjectCard
               title="Da' Notes"
               link="https://www.behance.net/gallery/38068151/Eagle"
@@ -206,7 +214,10 @@ const Index = () => (
             >
               Da' Notes is a web app created to create, edit, copy, and delete notes. All notes are served in a SQLite database so notes can be accessed 
               from anywhere an internet connection is available.
+              <br/><br/>
+              GitHub: <a href="https://git.io/fpdlk">https://git.io/fpdlk</a>
             </ProjectCard>
+            {/* Project */}
             <ProjectCard
               title="Connie's Country Western Pub"
               link="https://www.behance.net/gallery/38068151/Eagle"
@@ -214,6 +225,8 @@ const Index = () => (
             >
               Connie is a hard working entrepenuer in Negril, Jamaica and one of my personal friends. Visiting with Connie in here pub one day she expressed 
               her desire for a website for her business. As my gift to my friend and one of my favorite projects, this site was created.
+              <br/><br/>
+              GitHub: <a href="https://git.io/fpdlk">https://git.io/fpdlk</a>
             </ProjectCard>
             <ProjectCard
               title="Hacker Noon: Publication"
