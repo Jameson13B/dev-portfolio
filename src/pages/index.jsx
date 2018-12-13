@@ -1,21 +1,26 @@
 /* global tw */
-import React from 'react';
-import styled from 'react-emotion';
-import 'typeface-cantata-one';
-import 'typeface-open-sans';
-import { Parallax, ParallaxLayer } from 'react-spring/dist/addons';
-import SEO from '../components/SEO';
-import SVG from '../components/SVG';
-import ProjectCard from '../components/ProjectCard';
-import { rotate, UpDown, UpDownWide, waveAnimation } from '../styles/animations';
-import { hidden } from '../styles/utils';
-import { colors } from '../../tailwind';
-import triangle from '../images/triangle.svg';
-import avatar from '../images/avatar.jpg';
-import '../styles/global';
+import React from "react";
+import styled from "react-emotion";
+import "typeface-cantata-one";
+import "typeface-open-sans";
+import { Parallax, ParallaxLayer } from "react-spring/dist/addons";
+import SEO from "../components/SEO";
+import SVG from "../components/SVG";
+import ProjectCard from "../components/ProjectCard";
+import {
+  rotate,
+  UpDown,
+  UpDownWide,
+  waveAnimation
+} from "../styles/animations";
+import { hidden } from "../styles/utils";
+import { colors } from "../../tailwind";
+import triangle from "../images/triangle.svg";
+import avatar from "../images/avatar.jpg";
+import "../styles/global";
 
 const Divider = styled(ParallaxLayer)`
-  ${tw('absolute w-full h-full')};
+  ${tw("absolute w-full h-full")};
   background: ${props => props.bg};
   svg {
     fill: ${props => props.fill};
@@ -28,27 +33,29 @@ const DividerMiddle = styled(Divider)`
 `;
 
 const Content = styled(ParallaxLayer)`
-  ${tw('p-6 md:p-12 lg:p-24 justify-center items-center flex z-50')};
+  ${tw("p-6 md:p-12 lg:p-24 justify-center items-center flex z-50")};
 `;
 
 const Hero = styled.div`
-  ${tw('w-full xl:w-2/3')};
+  ${tw("w-full xl:w-2/3")};
 `;
 
 const Inner = styled.div`
-  ${tw('w-full xxl:w-2/3 text-center lg:text-left')};
+  ${tw("w-full xxl:w-2/3 text-center lg:text-left")};
 `;
 
 const BigTitle = styled.h1`
-  ${tw('text-5xl lg:text-6xl font-serif text-white mb-6 tracking-wide')};
+  ${tw("text-5xl lg:text-6xl font-serif text-white mb-6 tracking-wide")};
   text-shadow: 0 5px 35px rgba(255, 255, 255, 0.15);
 `;
 
 const Title = styled.h1`
-  ${tw('text-4xl lg:text-4xl font-serif text-white mb-8 tracking-wide relative inline-block')};
+  ${tw(
+    "text-4xl lg:text-4xl font-serif text-white mb-8 tracking-wide relative inline-block"
+  )};
   text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
   &:before {
-    content: '';
+    content: "";
     width: 40px;
     height: 40px;
     background: url(${triangle});
@@ -61,12 +68,12 @@ const Title = styled.h1`
 `;
 
 const Subtitle = styled.p`
-  ${tw('text-2xl lg:text-4xl font-sans text-white mt-8 xxl:w-3/4')};
+  ${tw("text-2xl lg:text-4xl font-sans text-white mt-8 xxl:w-3/4")};
   text-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
 `;
 
 const ProjectsWrapper = styled.div`
-  ${tw('flex flex-wrap justify-between mt-8')};
+  ${tw("flex flex-wrap justify-between mt-8")};
   display: grid;
   grid-gap: 4rem;
   grid-template-columns: repeat(2, 1fr);
@@ -80,12 +87,12 @@ const ProjectsWrapper = styled.div`
 `;
 
 const WaveWrapper = styled.div`
-  ${tw('absolute pin-b w-full')};
+  ${tw("absolute pin-b w-full")};
   transform: matrix(1, 0, 0, -1, 0, 0);
 `;
 
 const InnerWave = styled.div`
-  ${tw('relative h-full')};
+  ${tw("relative h-full")};
   svg {
     width: 100%;
     height: 40vh;
@@ -93,23 +100,25 @@ const InnerWave = styled.div`
 `;
 
 const AboutHero = styled.div`
-  ${tw('flex flex-col lg:flex-row items-center mt-8')};
+  ${tw("flex flex-col lg:flex-row items-center mt-8")};
 `;
 
 const Avatar = styled.img`
-  ${tw('rounded-full w-32 xl:w-48 shadow-lg h-auto')};
+  ${tw("rounded-full w-32 xl:w-48 shadow-lg h-auto")};
 `;
 
 const AboutSub = styled.span`
-  ${tw('text-white pt-12 lg:pt-0 lg:pl-12 text-2xl lg:text-3xl xl:text-4xl')};
+  ${tw("text-white pt-12 lg:pt-0 lg:pl-12 text-2xl lg:text-3xl xl:text-4xl")};
 `;
 
 const AboutDesc = styled.p`
-  ${tw('text-grey-light text-lg md:text-xl lg:text-2xl font-sans pt-6 md:pt-12 text-justify')};
+  ${tw(
+    "text-grey-light text-lg md:text-xl lg:text-2xl font-sans pt-6 md:pt-12 text-justify"
+  )};
 `;
 
 const ContactText = styled.p`
-  ${tw('text-grey-light font-sans text-xl md:text-2xl lg:text-3xl')};
+  ${tw("text-grey-light font-sans text-xl md:text-2xl lg:text-3xl")};
   a {
     color: #e07628;
     text-decoration: none;
@@ -117,7 +126,8 @@ const ContactText = styled.p`
 `;
 
 const Footer = styled.footer`
-  ${tw('text-center text-grey absolute pin-b p-6 font-sans text-md lg:text-lg')};
+  ${tw("text-center text-grey absolute pin-b p-6 font-sans")};
+  font-size: 0.75rem;
   a {
     color: #e07628;
     text-decoration: none;
@@ -130,37 +140,166 @@ const Index = () => (
     <Parallax pages={5}>
       <Divider speed={0.2} offset={0}>
         <UpDown>
-          <SVG icon="triangle" className={hidden} width={48} stroke={colors.orange} left="10%" top="20%" />
-          <SVG icon="hexa" width={48} stroke={colors.red} left="60%" top="70%" />
-          <SVG icon="box" width={6} fill={colors['grey-darker']} left="60%" top="15%" />
+          <SVG
+            icon="triangle"
+            className={hidden}
+            width={48}
+            stroke={colors.orange}
+            left="10%"
+            top="20%"
+          />
+          <SVG
+            icon="hexa"
+            width={48}
+            stroke={colors.red}
+            left="60%"
+            top="70%"
+          />
+          <SVG
+            icon="box"
+            width={6}
+            fill={colors["grey-darker"]}
+            left="60%"
+            top="15%"
+          />
         </UpDown>
         <UpDownWide>
-          <SVG icon="arrowUp" className={hidden} width={16} fill={colors['blue-dark']} left="80%" top="10%" />
-          <SVG icon="triangle" width={12} stroke={colors.white} left="90%" top="50%" />
-          <SVG icon="circle" width={16} fill={colors['grey-darker']} left="70%" top="90%" />
-          <SVG icon="triangle" width={16} stroke={colors['grey-darkest']} left="30%" top="65%" />
-          <SVG icon="circle" width={6} fill={colors['grey-darkest']} left="75%" top="10%" />
-          <SVG icon="upDown" className={hidden} width={8} fill={colors['grey-darkest']} left="45%" top="10%" />
+          <SVG
+            icon="arrowUp"
+            className={hidden}
+            width={16}
+            fill={colors["blue-dark"]}
+            left="80%"
+            top="10%"
+          />
+          <SVG
+            icon="triangle"
+            width={12}
+            stroke={colors.white}
+            left="90%"
+            top="50%"
+          />
+          <SVG
+            icon="circle"
+            width={16}
+            fill={colors["grey-darker"]}
+            left="70%"
+            top="90%"
+          />
+          <SVG
+            icon="triangle"
+            width={16}
+            stroke={colors["grey-darkest"]}
+            left="30%"
+            top="65%"
+          />
+          <SVG
+            icon="circle"
+            width={6}
+            fill={colors["grey-darkest"]}
+            left="75%"
+            top="10%"
+          />
+          <SVG
+            icon="upDown"
+            className={hidden}
+            width={8}
+            fill={colors["grey-darkest"]}
+            left="45%"
+            top="10%"
+          />
         </UpDownWide>
-        <SVG icon="circle" className={hidden} width={24} fill={colors['grey-darker']} left="5%" top="70%" />
-        <SVG icon="circle" width={6} fill={colors['grey-darkest']} left="4%" top="20%" />
-        <SVG icon="circle" width={12} fill={colors['grey-darkest']} left="50%" top="60%" />
-        <SVG icon="upDown" width={8} fill={colors['grey-darkest']} left="95%" top="90%" />
-        <SVG icon="upDown" className={hidden} width={24} fill={colors['grey-darker']} left="40%" top="80%" />
-        <SVG icon="triangle" width={8} stroke={colors['grey-darker']} left="25%" top="5%" />
+        <SVG
+          icon="circle"
+          className={hidden}
+          width={24}
+          fill={colors["grey-darker"]}
+          left="5%"
+          top="70%"
+        />
+        <SVG
+          icon="circle"
+          width={6}
+          fill={colors["grey-darkest"]}
+          left="4%"
+          top="20%"
+        />
+        <SVG
+          icon="circle"
+          width={12}
+          fill={colors["grey-darkest"]}
+          left="50%"
+          top="60%"
+        />
+        <SVG
+          icon="upDown"
+          width={8}
+          fill={colors["grey-darkest"]}
+          left="95%"
+          top="90%"
+        />
+        <SVG
+          icon="upDown"
+          className={hidden}
+          width={24}
+          fill={colors["grey-darker"]}
+          left="40%"
+          top="80%"
+        />
+        <SVG
+          icon="triangle"
+          width={8}
+          stroke={colors["grey-darker"]}
+          left="25%"
+          top="5%"
+        />
         <SVG icon="circle" width={64} fill={colors.green} left="95%" top="5%" />
-        <SVG icon="box" className={hidden} width={64} fill={colors.purple} left="5%" top="90%" />
-        <SVG icon="box" width={6} fill={colors['grey-darkest']} left="10%" top="10%" />
-        <SVG icon="box" width={12} fill={colors['grey-darkest']} left="40%" top="30%" />
-        <SVG icon="hexa" width={16} stroke={colors['grey-darker']} left="10%" top="50%" />
-        <SVG icon="hexa" width={8} stroke={colors['grey-darker']} left="80%" top="70%" />
+        <SVG
+          icon="box"
+          className={hidden}
+          width={64}
+          fill={colors.purple}
+          left="5%"
+          top="90%"
+        />
+        <SVG
+          icon="box"
+          width={6}
+          fill={colors["grey-darkest"]}
+          left="10%"
+          top="10%"
+        />
+        <SVG
+          icon="box"
+          width={12}
+          fill={colors["grey-darkest"]}
+          left="40%"
+          top="30%"
+        />
+        <SVG
+          icon="hexa"
+          width={16}
+          stroke={colors["grey-darker"]}
+          left="10%"
+          top="50%"
+        />
+        <SVG
+          icon="hexa"
+          width={8}
+          stroke={colors["grey-darker"]}
+          left="80%"
+          top="70%"
+        />
       </Divider>
       <Content speed={0.4} offset={0}>
         <Hero>
           <BigTitle>
             Hello, <br /> I'm Jameson Brown.
           </BigTitle>
-          <Subtitle>I'm creating beautiful web applications and solutions while continually learning in a tech focused world.</Subtitle>
+          <Subtitle>
+            I'm creating beautiful web applications and solutions while
+            continually learning in a tech focused world.
+          </Subtitle>
         </Hero>
       </Content>
       <DividerMiddle
@@ -179,10 +318,18 @@ const Index = () => (
               link="https://team-comm.netlify.com"
               bg="linear-gradient(to right, #D4145A 0%, #FBB03B 100%)"
             >
-              A web app that helps distributed or remote teams with real-time document collaboration and scheduling meetings. 
-              Team Communicator is built with a React/Redux frontend (deployed to Netlify) and Node/Express backend (deployed to Heroku).
-              <br/><br/>
-              <a href="https://git.io/fpdlk" style={{color: "white", fontWeight: "bold"}}>GitHub</a>
+              A web app that helps distributed or remote teams with real-time
+              document collaboration and scheduling meetings. Team Communicator
+              is built with a React/Redux frontend (deployed to Netlify) and
+              Node/Express backend (deployed to Heroku).
+              <br />
+              <br />
+              <a
+                href="https://git.io/fpdlk"
+                style={{ color: "white", fontWeight: "bold" }}
+              >
+                GitHub
+              </a>
             </ProjectCard>
             {/* Project */}
             <ProjectCard
@@ -190,11 +337,20 @@ const Index = () => (
               link="https://gameoflifereact.netlify.com/"
               bg="linear-gradient(to right, #662D8C 0%, #ED1E79 100%)"
             >
-              A web app that emulates John Conway’s Game of Life. A grid of cells(alive or dead) that can be manually populated or with templates. 
-              The cells then advance based on a set of rules that govern their replication and destruction. Includes features like variable speed settings, 
-              objects that reach end of screen wrap, and more. Created with React and CSS.
-              <br/><br/>
-              <a href="https://git.io/fpdlq" style={{color: "white", fontWeight: "bold"}}>GitHub</a>
+              A web app that emulates John Conway’s Game of Life. A grid of
+              cells(alive or dead) that can be manually populated or with
+              templates. The cells then advance based on a set of rules that
+              govern their replication and destruction. Includes features like
+              variable speed settings, objects that reach end of screen wrap,
+              and more. Created with React and CSS.
+              <br />
+              <br />
+              <a
+                href="https://git.io/fpdlq"
+                style={{ color: "white", fontWeight: "bold" }}
+              >
+                GitHub
+              </a>
             </ProjectCard>
             {/* Project */}
             <ProjectCard
@@ -202,9 +358,17 @@ const Index = () => (
               link="https://reactjack.netlify.com/"
               bg="linear-gradient(to right, #009245 0%, #FCEE21 100%)"
             >
-              A blackjack web app created with React and the Deck of Cards API by Chase Roberts. Global state is currently being added with ReactN.
-              <br/><br/>
-              <a href="https://git.io/fpdlO" style={{color: "white", fontWeight: "bold"}}>GitHub</a>
+              A blackjack web app created with React and the Deck of Cards API
+              by Chase Roberts. Global state is currently being added with
+              ReactN.
+              <br />
+              <br />
+              <a
+                href="https://git.io/fpdlO"
+                style={{ color: "white", fontWeight: "bold" }}
+              >
+                GitHub
+              </a>
             </ProjectCard>
             {/* Project */}
             <ProjectCard
@@ -212,11 +376,25 @@ const Index = () => (
               link="https://da-notes.netlify.com/"
               bg="linear-gradient(to right, #D585FF 0%, #00FFEE 100%)"
             >
-              Da' Notes is a web app created to create, edit, copy, and delete notes. All notes are served in a SQLite database so notes can be accessed 
-              from anywhere an internet connection is available. Created with React on front end and Python/Django on back end.
-              <br/><br/>
-              <a href="https://git.io/fpdl3" style={{color: "white", fontWeight: "bold"}}>GitHub: Client</a><br/>
-              <a href="https://git.io/fpdlG" style={{color: "white", fontWeight: "bold"}}>GitHub: Server</a>
+              Da' Notes is a web app created to create, edit, copy, and delete
+              notes. All notes are served in a SQLite database so notes can be
+              accessed from anywhere an internet connection is available.
+              Created with React on front end and Python/Django on back end.
+              <br />
+              <br />
+              <a
+                href="https://git.io/fpdl3"
+                style={{ color: "white", fontWeight: "bold" }}
+              >
+                GitHub: Client
+              </a>
+              <br />
+              <a
+                href="https://git.io/fpdlG"
+                style={{ color: "white", fontWeight: "bold" }}
+              >
+                GitHub: Server
+              </a>
             </ProjectCard>
             {/* Project */}
             <ProjectCard
@@ -224,17 +402,26 @@ const Index = () => (
               link="https://conniespub.netlify.com/"
               bg="linear-gradient(to right, #D4145A 0%, #FBB03B 100%)"
             >
-              Connie is a hard working entrepenuer in Negril, Jamaica and one of my personal friends. Visiting with Connie in here pub one day she expressed 
-              her desire for a website for her business. As my gift to my friend and one of my favorite projects, this site was created.
-              <br/><br/>
-              <a href="https://github.com/Jameson13B/connies-pub" style={{color: "white", fontWeight: "bold"}}>GitHub</a>
+              Connie is a hard working entrepenuer in Negril, Jamaica and one of
+              my personal friends. Visiting with Connie in here pub one day she
+              expressed her desire for a website for her business. As my gift to
+              my friend and one of my favorite projects, this site was created.
+              <br />
+              <br />
+              <a
+                href="https://github.com/Jameson13B/connies-pub"
+                style={{ color: "white", fontWeight: "bold" }}
+              >
+                GitHub
+              </a>
             </ProjectCard>
             <ProjectCard
               title="Hacker Noon: Publication"
               link="https://hackernoon.com/stripe-api-reactjs-and-express-bc446bf08301"
               bg="linear-gradient(to right, #662D8C 0%, #ED1E79 100%)"
             >
-              Stripe API, ReactJS, and Express - A tutorial for integrating Stripe Checkout with your React/Express application.
+              Stripe API, ReactJS, and Express - A tutorial for integrating
+              Stripe Checkout with your React/Express application.
             </ProjectCard>
           </ProjectsWrapper>
         </Inner>
@@ -242,44 +429,184 @@ const Index = () => (
       <Divider speed={0.1} offset={1} factor={2}>
         <UpDown>
           <SVG icon="box" width={6} fill={colors.white} left="85%" top="75%" />
-          <SVG icon="upDown" width={8} fill={colors.teal} left="70%" top="20%" />
-          <SVG icon="triangle" width={8} stroke={colors.orange} left="25%" top="5%" />
-          <SVG icon="circle" className={hidden} width={24} fill={colors.white} left="17%" top="60%" />
+          <SVG
+            icon="upDown"
+            width={8}
+            fill={colors.teal}
+            left="70%"
+            top="20%"
+          />
+          <SVG
+            icon="triangle"
+            width={8}
+            stroke={colors.orange}
+            left="25%"
+            top="5%"
+          />
+          <SVG
+            icon="circle"
+            className={hidden}
+            width={24}
+            fill={colors.white}
+            left="17%"
+            top="60%"
+          />
         </UpDown>
         <UpDownWide>
-          <SVG icon="arrowUp" className={hidden} width={16} fill={colors.green} left="20%" top="90%" />
-          <SVG icon="triangle" width={12} stroke={colors.white} left="90%" top="30%" />
-          <SVG icon="circle" width={16} fill={colors.yellow} left="70%" top="90%" />
-          <SVG icon="triangle" className={hidden} width={16} stroke={colors.teal} left="18%" top="75%" />
-          <SVG icon="circle" width={6} fill={colors.white} left="75%" top="10%" />
-          <SVG icon="upDown" className={hidden} width={8} fill={colors.green} left="45%" top="10%" />
+          <SVG
+            icon="arrowUp"
+            className={hidden}
+            width={16}
+            fill={colors.green}
+            left="20%"
+            top="90%"
+          />
+          <SVG
+            icon="triangle"
+            width={12}
+            stroke={colors.white}
+            left="90%"
+            top="30%"
+          />
+          <SVG
+            icon="circle"
+            width={16}
+            fill={colors.yellow}
+            left="70%"
+            top="90%"
+          />
+          <SVG
+            icon="triangle"
+            className={hidden}
+            width={16}
+            stroke={colors.teal}
+            left="18%"
+            top="75%"
+          />
+          <SVG
+            icon="circle"
+            width={6}
+            fill={colors.white}
+            left="75%"
+            top="10%"
+          />
+          <SVG
+            icon="upDown"
+            className={hidden}
+            width={8}
+            fill={colors.green}
+            left="45%"
+            top="10%"
+          />
         </UpDownWide>
         <SVG icon="circle" width={6} fill={colors.white} left="4%" top="20%" />
         <SVG icon="circle" width={12} fill={colors.pink} left="80%" top="60%" />
         <SVG icon="box" width={6} fill={colors.orange} left="10%" top="10%" />
         <SVG icon="box" width={12} fill={colors.yellow} left="29%" top="26%" />
         <SVG icon="hexa" width={16} stroke={colors.red} left="75%" top="30%" />
-        <SVG icon="hexa" width={8} stroke={colors.yellow} left="80%" top="70%" />
+        <SVG
+          icon="hexa"
+          width={8}
+          stroke={colors.yellow}
+          left="80%"
+          top="70%"
+        />
       </Divider>
-      <Divider bg="#23262b" clipPath="polygon(0 16%, 100% 4%, 100% 82%, 0 94%)" speed={0.2} offset={3} />
+      <Divider
+        bg="#23262b"
+        clipPath="polygon(0 16%, 100% 4%, 100% 82%, 0 94%)"
+        speed={0.2}
+        offset={3}
+      />
       <Divider speed={0.1} offset={3}>
         <UpDown>
-          <SVG icon="box" className={hidden} width={6} fill={colors.blue} left="50%" top="75%" />
-          <SVG icon="upDown" className={hidden} width={8} fill={colors['grey-darkest']} left="70%" top="20%" />
-          <SVG icon="triangle" width={8} stroke={colors['grey-darkest']} left="25%" top="5%" />
-          <SVG icon="upDown" className={hidden} width={24} fill={colors.orange} left="80%" top="80%" />
+          <SVG
+            icon="box"
+            className={hidden}
+            width={6}
+            fill={colors.blue}
+            left="50%"
+            top="75%"
+          />
+          <SVG
+            icon="upDown"
+            className={hidden}
+            width={8}
+            fill={colors["grey-darkest"]}
+            left="70%"
+            top="20%"
+          />
+          <SVG
+            icon="triangle"
+            width={8}
+            stroke={colors["grey-darkest"]}
+            left="25%"
+            top="5%"
+          />
+          <SVG
+            icon="upDown"
+            className={hidden}
+            width={24}
+            fill={colors.orange}
+            left="80%"
+            top="80%"
+          />
         </UpDown>
         <UpDownWide>
-          <SVG icon="arrowUp" className={hidden} width={16} fill={colors.purple} left="5%" top="80%" />
-          <SVG icon="triangle" width={12} stroke={colors.white} left="95%" top="50%" />
-          <SVG icon="circle" width={6} fill={colors.white} left="85%" top="15%" />
-          <SVG icon="upDown" className={hidden} width={8} fill={colors['grey-darkest']} left="45%" top="10%" />
+          <SVG
+            icon="arrowUp"
+            className={hidden}
+            width={16}
+            fill={colors.purple}
+            left="5%"
+            top="80%"
+          />
+          <SVG
+            icon="triangle"
+            width={12}
+            stroke={colors.white}
+            left="95%"
+            top="50%"
+          />
+          <SVG
+            icon="circle"
+            width={6}
+            fill={colors.white}
+            left="85%"
+            top="15%"
+          />
+          <SVG
+            icon="upDown"
+            className={hidden}
+            width={8}
+            fill={colors["grey-darkest"]}
+            left="45%"
+            top="10%"
+          />
         </UpDownWide>
         <SVG icon="circle" width={6} fill={colors.white} left="4%" top="20%" />
-        <SVG icon="circle" width={12} fill={colors['grey-darkest']} left="70%" top="60%" />
+        <SVG
+          icon="circle"
+          width={12}
+          fill={colors["grey-darkest"]}
+          left="70%"
+          top="60%"
+        />
         <SVG icon="box" width={6} fill={colors.orange} left="10%" top="10%" />
-        <SVG icon="box" width={12} fill={colors['grey-darkest']} left="20%" top="30%" />
-        <SVG icon="hexa" width={8} stroke={colors['grey-darkest']} left="80%" top="70%" />
+        <SVG
+          icon="box"
+          width={12}
+          fill={colors["grey-darkest"]}
+          left="20%"
+          top="30%"
+        />
+        <SVG
+          icon="hexa"
+          width={8}
+          stroke={colors["grey-darkest"]}
+          left="80%"
+          top="70%"
+        />
       </Divider>
       <Content speed={0.4} offset={3}>
         <Inner>
@@ -287,23 +614,32 @@ const Index = () => (
           <AboutHero>
             <Avatar src={avatar} alt="John Doe" />
             <AboutSub>
-              The English language can not fully capture the depth and complexity of my thoughts. So I'm incorporating
-              Emoji into my speech to better express myself. Winky face.
+              I love working with technology to help improve myself and others
+              lives. Always looking to learn and implement the newest
+              technologies to better myself, others, and the tools we use daily.
             </AboutSub>
           </AboutHero>
           <AboutDesc>
-            You know the way you feel when you see a picture of two otters holding hands? That's how you're gonna feel
-            every day. My mother cried the day I was born because she knew she’d never be prettier than me. You should
-            make me your campaign manager. I was born for politics. I have great hair and I love lying. Captain? The
-            kids want to know where Paulie the Pigeon is. I told them he got sucked up into an airplane engine, is that
-            all right?
+            As a proud born and raised Utahn, I have always had a passion for
+            the outdoors, nature, and animals. Especially my black lab, Dexter.
+            For about 8 years I learned and contributed to the hospitality
+            industry through hotels and restaurants. I reached a point in my
+            life where I wanted to make my passion for technology and building
+            things my full time career. I started my adventure with a 31 week
+            full time computer science and web development academy called Lambda
+            School. I learned more then I could possibly imagine and am now
+            looking to apply my knowledge and skills with a great team.
           </AboutDesc>
         </Inner>
       </Content>
       <Divider fill="#23262b" speed={0.2} offset={4}>
         <WaveWrapper>
           <InnerWave>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 338.05" preserveAspectRatio="none">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 800 338.05"
+              preserveAspectRatio="none"
+            >
               <path className={waveAnimation}>
                 <animate
                   attributeName="d"
@@ -320,30 +656,78 @@ const Index = () => (
         <Inner>
           <Title>Get in touch</Title>
           <ContactText>
-            Say <a href="mailto:jamesonbrownm@neolivity.com">Hi</a> or find me on other platforms:{' '}
-            <a href="https://twitter.com/jameson_brown">Twitter</a> &{' '}
+            Say <a href="mailto:jamesonbrownm@neolivity.com">Hi</a> or find me
+            on other platforms:{" "}
+            <a href="https://twitter.com/jameson_brown">Twitter</a> &{" "}
             <a href="https://github.com/Jameson13B">Github</a>
           </ContactText>
         </Inner>
-        <Footer>
-          &copy; 2018 by Gatsby Starter Portfolio Cara.{' '}
-          <a href="https://github.com/LekoArts/gatsby-starter-portfolio-cara">Github Repository</a>.
-        </Footer>
+        <Footer>&copy; 2018 by Gatsby Starter Portfolio Cara.</Footer>
       </Content>
       <Divider speed={0.1} offset={4}>
         <UpDown>
-          <SVG icon="upDown" className={hidden} width={8} fill={colors['grey-darkest']} left="70%" top="20%" />
-          <SVG icon="triangle" width={8} stroke={colors['grey-darkest']} left="25%" top="5%" />
+          <SVG
+            icon="upDown"
+            className={hidden}
+            width={8}
+            fill={colors["grey-darkest"]}
+            left="70%"
+            top="20%"
+          />
+          <SVG
+            icon="triangle"
+            width={8}
+            stroke={colors["grey-darkest"]}
+            left="25%"
+            top="5%"
+          />
         </UpDown>
         <UpDownWide>
-          <SVG icon="triangle" width={12} stroke={colors.white} left="95%" top="50%" />
-          <SVG icon="circle" width={6} fill={colors.white} left="85%" top="15%" />
-          <SVG icon="upDown" className={hidden} width={8} fill={colors['grey-darkest']} left="45%" top="10%" />
+          <SVG
+            icon="triangle"
+            width={12}
+            stroke={colors.white}
+            left="95%"
+            top="50%"
+          />
+          <SVG
+            icon="circle"
+            width={6}
+            fill={colors.white}
+            left="85%"
+            top="15%"
+          />
+          <SVG
+            icon="upDown"
+            className={hidden}
+            width={8}
+            fill={colors["grey-darkest"]}
+            left="45%"
+            top="10%"
+          />
         </UpDownWide>
         <SVG icon="circle" width={6} fill={colors.white} left="4%" top="20%" />
-        <SVG icon="circle" width={12} fill={colors['grey-darkest']} left="70%" top="60%" />
-        <SVG icon="box" width={12} fill={colors['grey-darkest']} left="20%" top="30%" />
-        <SVG icon="hexa" width={8} stroke={colors['grey-darkest']} left="80%" top="70%" />
+        <SVG
+          icon="circle"
+          width={12}
+          fill={colors["grey-darkest"]}
+          left="70%"
+          top="60%"
+        />
+        <SVG
+          icon="box"
+          width={12}
+          fill={colors["grey-darkest"]}
+          left="20%"
+          top="30%"
+        />
+        <SVG
+          icon="hexa"
+          width={8}
+          stroke={colors["grey-darkest"]}
+          left="80%"
+          top="70%"
+        />
       </Divider>
     </Parallax>
   </React.Fragment>
