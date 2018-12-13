@@ -182,7 +182,7 @@ const Index = () => (
               A web app that helps distributed or remote teams with real-time document collaboration and scheduling meetings. 
               Team Communicator is built with a React/Redux frontend (deployed to Netlify) and Node/Express backend (deployed to Heroku).
               <br/><br/>
-              GitHub: <a href="https://git.io/fpdlk" style={{color: "white"}}>GitHub</a>
+              <a href="https://git.io/fpdlk" style={{color: "white", fontWeight: "bold"}}>GitHub</a>
             </ProjectCard>
             {/* Project */}
             <ProjectCard
@@ -194,7 +194,7 @@ const Index = () => (
               The cells then advance based on a set of rules that govern their replication and destruction. Includes features like variable speed settings, 
               objects that reach end of screen wrap, and more. Created with React and CSS.
               <br/><br/>
-              <a href="https://git.io/fpdlq" style={{color: "white"}}>GitHub</a>
+              <a href="https://git.io/fpdlq" style={{color: "white", fontWeight: "bold"}}>GitHub</a>
             </ProjectCard>
             {/* Project */}
             <ProjectCard
@@ -204,7 +204,7 @@ const Index = () => (
             >
               A blackjack web app created with React and the Deck of Cards API by Chase Roberts. Global state is currently being added with ReactN.
               <br/><br/>
-              <a href="https://git.io/fpdlO" style={{color: "white"}}>GitHub</a>
+              <a href="https://git.io/fpdlO" style={{color: "white", fontWeight: "bold"}}>GitHub</a>
             </ProjectCard>
             {/* Project */}
             <ProjectCard
@@ -215,8 +215,8 @@ const Index = () => (
               Da' Notes is a web app created to create, edit, copy, and delete notes. All notes are served in a SQLite database so notes can be accessed 
               from anywhere an internet connection is available. Created with React on front end and Python/Django on back end.
               <br/><br/>
-              <a href="https://git.io/fpdl3" style={{color: "white"}}>GitHub: Client</a>
-              <a href="https://git.io/fpdlG" style={{color: "white"}}>GitHub: Server</a>
+              <a href="https://git.io/fpdl3" style={{color: "white", fontWeight: "bold"}}>GitHub: Client</a><br/>
+              <a href="https://git.io/fpdlG" style={{color: "white", fontWeight: "bold"}}>GitHub: Server</a>
             </ProjectCard>
             {/* Project */}
             <ProjectCard
@@ -227,7 +227,7 @@ const Index = () => (
               Connie is a hard working entrepenuer in Negril, Jamaica and one of my personal friends. Visiting with Connie in here pub one day she expressed 
               her desire for a website for her business. As my gift to my friend and one of my favorite projects, this site was created.
               <br/><br/>
-              <a href="https://github.com/Jameson13B/connies-pub" style={{color: "white"}}>GitHub</a>
+              <a href="https://github.com/Jameson13B/connies-pub" style={{color: "white", fontWeight: "bold"}}>GitHub</a>
             </ProjectCard>
             <ProjectCard
               title="Hacker Noon: Publication"
