@@ -160,7 +160,7 @@ const Index = () => (
           <BigTitle>
             Hello, <br /> I'm Jameson Brown.
           </BigTitle>
-          <Subtitle>I'm creating beautiful web applications and continually learning in a tech focused world.</Subtitle>
+          <Subtitle>I'm creating beautiful web applications and solutions while continually learning in a tech focused world.</Subtitle>
         </Hero>
       </Content>
       <DividerMiddle
@@ -175,11 +175,13 @@ const Index = () => (
           <ProjectsWrapper>
             <ProjectCard
               title="Team Communicators"
-              link="https://www.behance.net/gallery/58937147/Freiheit"
+              link="https://team-comm.netlify.com"
               bg="linear-gradient(to right, #D4145A 0%, #FBB03B 100%)"
             >
               A web app that helps distributed or remote teams with real-time document collaboration and scheduling meetings. 
               Team Communicator is built with a React/Redux frontend (deployed to Netlify) and Node/Express backend (deployed to Heroku).
+              <br/><br/>
+              GitHub: <a href="https://git.io/fpdlk">https://git.io/fpdlk</a>
             </ProjectCard>
             <ProjectCard
               title="Game of Life"
@@ -188,7 +190,7 @@ const Index = () => (
             >
               A web app that emulates John Conway’s Game of Life. A grid of cells(alive or dead) that can be manually populated or with templates. 
               The cells then advance based on a set of rules that govern their replication and destruction. Includes features like variable speed settings, 
-              objects that reach end of screen wrap, and more
+              objects that reach end of screen wrap, and more. Created with React and CSS.
             </ProjectCard>
             <ProjectCard
               title="ReactJack 21"
@@ -202,21 +204,23 @@ const Index = () => (
               link="https://www.behance.net/gallery/38068151/Eagle"
               bg="linear-gradient(to right, #D585FF 0%, #00FFEE 100%)"
             >
-              Insert Da' Notes description here
+              Da' Notes is a web app created to create, edit, copy, and delete notes. All notes are served in a SQLite database so notes can be accessed 
+              from anywhere an internet connection is available.
             </ProjectCard>
             <ProjectCard
               title="Connie's Country Western Pub"
               link="https://www.behance.net/gallery/38068151/Eagle"
               bg="linear-gradient(to right, #D4145A 0%, #FBB03B 100%)"
             >
-              Insert Connies Country Western Pub description here
+              Connie is a hard working entrepenuer in Negril, Jamaica and one of my personal friends. Visiting with Connie in here pub one day she expressed 
+              her desire for a website for her business. As my gift to my friend and one of my favorite projects, this site was created.
             </ProjectCard>
             <ProjectCard
               title="Hacker Noon: Publication"
               link="https://hackernoon.com/stripe-api-reactjs-and-express-bc446bf08301"
               bg="linear-gradient(to right, #662D8C 0%, #ED1E79 100%)"
             >
-              Stripe API, ReactJS, and Express tutorial
+              Stripe API, ReactJS, and Express - A tutorial for integrating Stripe Checkout with your React/Express application.
             </ProjectCard>
           </ProjectsWrapper>
         </Inner>
