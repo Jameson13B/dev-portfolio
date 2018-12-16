@@ -137,7 +137,7 @@ const Footer = styled.footer`
 const Index = () => (
   <React.Fragment>
     <SEO />
-    <Parallax pages={5}>
+    <Parallax pages={5.25}>
       <Divider speed={0.2} offset={0}>
         <UpDown>
           <SVG
@@ -305,7 +305,7 @@ const Index = () => (
       <DividerMiddle
         bg="linear-gradient(to right, SlateBlue 0%, DeepSkyBlue 100%)"
         speed={-0.2}
-        offset={1.1}
+        offset={1.35}
         factor={2}
       />
       <Content speed={0.4} offset={1.2} factor={2}>
@@ -321,7 +321,8 @@ const Index = () => (
               A web app that helps distributed or remote teams with real-time
               document collaboration and scheduling meetings. Team Communicator
               is built with a React/Redux frontend (deployed to Netlify) and
-              Node/Express backend (deployed to Heroku).
+              Node/Express backend (deployed to Heroku). Integrates third party
+              APIs like Zoom, Stripe, and Socket.io.
               <br />
               <br />
               <a
@@ -354,17 +355,18 @@ const Index = () => (
             </ProjectCard>
             {/* Project */}
             <ProjectCard
-              title="ReactJack 21"
-              link="https://reactjack.netlify.com/"
+              title="Connie's Country Western Pub"
+              link="https://conniespub.netlify.com/"
               bg="linear-gradient(to right, #009245 0%, #FCEE21 100%)"
             >
-              A blackjack web app created with React and the Deck of Cards API
-              by Chase Roberts. Global state is currently being added with
-              ReactN.
+              Connie is a hard working entrepenuer in Negril, Jamaica and one of
+              my personal friends. Visiting with Connie in here pub one day she
+              expressed her desire for a website for her business. As my gift to
+              my friend and one of my favorite projects, this site was created.
               <br />
               <br />
               <a
-                href="https://git.io/fpdlO"
+                href="https://github.com/Jameson13B/connies-pub"
                 style={{ color: "white", fontWeight: "bold" }}
               >
                 GitHub
@@ -398,18 +400,17 @@ const Index = () => (
             </ProjectCard>
             {/* Project */}
             <ProjectCard
-              title="Connie's Country Western Pub"
-              link="https://conniespub.netlify.com/"
+              title="ReactJack 21"
+              link="https://reactjack.netlify.com/"
               bg="linear-gradient(to right, #D4145A 0%, #FBB03B 100%)"
             >
-              Connie is a hard working entrepenuer in Negril, Jamaica and one of
-              my personal friends. Visiting with Connie in here pub one day she
-              expressed her desire for a website for her business. As my gift to
-              my friend and one of my favorite projects, this site was created.
+              A basic blackjack 21 web app created with React and the Deck of
+              Cards API by Chase Roberts. Global state is currently being added
+              with ReactN.
               <br />
               <br />
               <a
-                href="https://github.com/Jameson13B/connies-pub"
+                href="https://git.io/fpdlO"
                 style={{ color: "white", fontWeight: "bold" }}
               >
                 GitHub
@@ -426,7 +427,7 @@ const Index = () => (
           </ProjectsWrapper>
         </Inner>
       </Content>
-      <Divider speed={0.1} offset={1} factor={2}>
+      <Divider speed={0.1} offset={1.25} factor={2}>
         <UpDown>
           <SVG icon="box" width={6} fill={colors.white} left="85%" top="75%" />
           <SVG
@@ -516,9 +517,9 @@ const Index = () => (
         bg="#23262b"
         clipPath="polygon(0 16%, 100% 4%, 100% 82%, 0 94%)"
         speed={0.2}
-        offset={3}
+        offset={3.5}
       />
-      <Divider speed={0.1} offset={3}>
+      <Divider speed={0.1} offset={3.3}>
         <UpDown>
           <SVG
             icon="box"
@@ -608,7 +609,7 @@ const Index = () => (
           top="70%"
         />
       </Divider>
-      <Content speed={0.4} offset={3}>
+      <Content speed={0.4} offset={3.3}>
         <Inner>
           <Title>About</Title>
           <AboutHero>
@@ -632,7 +633,7 @@ const Index = () => (
           </AboutDesc>
         </Inner>
       </Content>
-      <Divider fill="#23262b" speed={0.2} offset={4}>
+      <Divider fill="#23262b" speed={0.2} offset={4.35}>
         <WaveWrapper>
           <InnerWave>
             <svg
@@ -652,7 +653,7 @@ const Index = () => (
           </InnerWave>
         </WaveWrapper>
       </Divider>
-      <Content speed={0.4} offset={4}>
+      <Content speed={0.4} offset={4.35}>
         <Inner>
           <Title>Get in touch</Title>
           <ContactText>
@@ -664,7 +665,7 @@ const Index = () => (
         </Inner>
         <Footer>&copy; 2018 by Gatsby Starter Portfolio Cara.</Footer>
       </Content>
-      <Divider speed={0.1} offset={4}>
+      <Divider speed={0.1} offset={4.25}>
         <UpDown>
           <SVG
             icon="upDown"
