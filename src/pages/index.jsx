@@ -297,8 +297,8 @@ const Index = () => (
             Hello, <br /> I'm Jameson Brown.
           </BigTitle>
           <Subtitle>
-            I'm creating beautiful web applications and solutions while
-            continually learning in a tech focused world.
+            I'm creating beautiful web applications and tools while continually
+            learning in a tech focused world.
           </Subtitle>
         </Hero>
       </Content>
@@ -659,6 +659,7 @@ const Index = () => (
           <ContactText>
             Say <a href="mailto:jamesonbrownm@neolivity.com">Hi</a> or find me
             on other platforms:{" "}
+            <a href="https://www.linkedin.com/in/jameson-brown/">LinkedIn</a> ,{" "}
             <a href="https://twitter.com/jameson_brown">Twitter</a> &{" "}
             <a href="https://github.com/Jameson13B">Github</a>
           </ContactText>
