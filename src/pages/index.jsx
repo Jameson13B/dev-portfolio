@@ -335,7 +335,7 @@ const Index = () => (
             {/* Project */}
             <ProjectCard
               title="Game of Life"
-              link="https://gameoflifereact.netlify.com/"
+              link="https://gameoflife.jamesonb.com/"
               bg="linear-gradient(to right, #662D8C 0%, #ED1E79 100%)"
             >
               A web app that emulates John Conway’s Game of Life. A grid of
@@ -375,7 +375,7 @@ const Index = () => (
             {/* Project */}
             <ProjectCard
               title="Da' Notes"
-              link="https://da-notes.netlify.com/"
+              link="https://da-notes.jamesonb.com/"
               bg="linear-gradient(to right, #D585FF 0%, #00FFEE 100%)"
             >
               Da' Notes is a web app created to create, edit, copy, and delete
