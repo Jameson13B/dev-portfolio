@@ -401,7 +401,7 @@ const Index = () => (
             {/* Project */}
             <ProjectCard
               title="ReactJack 21"
-              link="https://reactjack.netlify.com/"
+              link="https://reactjack21.jamesonb.com/"
               bg="linear-gradient(to right, #D4145A 0%, #FBB03B 100%)"
             >
               A basic blackjack 21 web app created with React and the Deck of
