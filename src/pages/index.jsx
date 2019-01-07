@@ -17,6 +17,7 @@ import { hidden } from "../styles/utils";
 import { colors } from "../../tailwind";
 import triangle from "../images/triangle.svg";
 import avatar from "../images/avatar.jpg";
+import badge from "../images/lambda_badge.png";
 import "../styles/global";
 
 const Divider = styled(ParallaxLayer)`
@@ -315,7 +316,7 @@ const Index = () => (
             {/* Project */}
             <ProjectCard
               title="Team Communicators"
-              link="https://team-comm.netlify.com"
+              link="https://www.teamcomm.app"
               bg="linear-gradient(to right, #D4145A 0%, #FBB03B 100%)"
             >
               A web app that helps distributed or remote teams with real-time
@@ -631,6 +632,12 @@ const Index = () => (
             School. I learned more then I could possibly imagine and am now
             looking to apply my knowledge and skills with a great team.
           </AboutDesc>
+          <a
+            href="https://www.youracclaim.com/badges/8006ed70-bd34-4fb7-bcc0-d2cb613b10f6/public_url"
+            target="_blank"
+          >
+            <img src={badge} alt="lambda_badge" style={{ width: "125px" }} />
+          </a>
         </Inner>
       </Content>
       <Divider fill="#23262b" speed={0.2} offset={4.35}>
