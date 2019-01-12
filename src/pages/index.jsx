@@ -629,7 +629,7 @@ const Index = () => (
             life where I wanted to make my passion for technology and building
             things my full time career. I started my adventure with a 31 week
             full time computer science and web development academy called Lambda
-            School. I learned more then I could possibly imagine and am now
+            School. I learned more than I could possibly imagine and am now
             looking to apply my knowledge and skills with a great team.
           </AboutDesc>
           <a
