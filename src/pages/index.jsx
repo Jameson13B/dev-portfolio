@@ -138,7 +138,7 @@ const Footer = styled.footer`
 const Index = () => (
   <React.Fragment>
     <SEO />
-    <Parallax pages={5.25}>
+    <Parallax pages={6}>
       <Divider speed={0.2} offset={0}>
         <UpDown>
           <SVG
@@ -154,7 +154,7 @@ const Index = () => (
             width={48}
             stroke={colors.red}
             left="60%"
-            top="70%"
+            top="90%"
           />
           <SVG
             icon="box"
@@ -178,7 +178,7 @@ const Index = () => (
             width={12}
             stroke={colors.white}
             left="90%"
-            top="50%"
+            top="60%"
           />
           <SVG
             icon="circle"
@@ -192,7 +192,7 @@ const Index = () => (
             width={16}
             stroke={colors["grey-darkest"]}
             left="30%"
-            top="65%"
+            top="75%"
           />
           <SVG
             icon="circle"
@@ -306,10 +306,10 @@ const Index = () => (
       <DividerMiddle
         bg="linear-gradient(to right, SlateBlue 0%, DeepSkyBlue 100%)"
         speed={-0.2}
-        offset={1.35}
+        offset={1.7}
         factor={2}
       />
-      <Content speed={0.4} offset={1.2} factor={2}>
+      <Content speed={0.4} offset={1.7} factor={2}>
         <Inner>
           <Title>Projects</Title>
           <ProjectsWrapper>
@@ -328,6 +328,7 @@ const Index = () => (
               <br />
               <a
                 href="https://git.io/fpdlk"
+                target="_blank"
                 style={{ color: "white", fontWeight: "bold" }}
               >
                 GitHub
@@ -349,6 +350,7 @@ const Index = () => (
               <br />
               <a
                 href="https://git.io/fpdlq"
+                target="_blank"
                 style={{ color: "white", fontWeight: "bold" }}
               >
                 GitHub
@@ -368,6 +370,7 @@ const Index = () => (
               <br />
               <a
                 href="https://github.com/Jameson13B/connies-pub"
+                target="_blank"
                 style={{ color: "white", fontWeight: "bold" }}
               >
                 GitHub
@@ -387,6 +390,7 @@ const Index = () => (
               <br />
               <a
                 href="https://git.io/fpdl3"
+                target="_blank"
                 style={{ color: "white", fontWeight: "bold" }}
               >
                 GitHub: Client
@@ -394,6 +398,7 @@ const Index = () => (
               <br />
               <a
                 href="https://git.io/fpdlG"
+                target="_blank"
                 style={{ color: "white", fontWeight: "bold" }}
               >
                 GitHub: Server
@@ -412,11 +417,13 @@ const Index = () => (
               <br />
               <a
                 href="https://git.io/fpdlO"
+                target="_blank"
                 style={{ color: "white", fontWeight: "bold" }}
               >
                 GitHub
               </a>
             </ProjectCard>
+            {/* Project */}
             <ProjectCard
               title="Hacker Noon: Publication"
               link="https://hackernoon.com/stripe-api-reactjs-and-express-bc446bf08301"
@@ -425,10 +432,28 @@ const Index = () => (
               Stripe API, ReactJS, and Express - A tutorial for integrating
               Stripe Checkout with your React/Express application.
             </ProjectCard>
+            {/* Project */}
+            <ProjectCard
+              title="Atomic10 Components"
+              link="https://www.npmjs.com/package/atomic10-components"
+              bg="linear-gradient(to right, #009245 0%, #FCEE21 100%)"
+            >
+              Atomic10 is a React component library with clean, contemporary,
+              and customizable components that will continue to grow.
+              <br />
+              <br />
+              <a
+                href="https://github.com/Jameson13B/atomic10-components"
+                target="_blank"
+                style={{ color: "white", fontWeight: "bold" }}
+              >
+                GitHub
+              </a>
+            </ProjectCard>
           </ProjectsWrapper>
         </Inner>
       </Content>
-      <Divider speed={0.1} offset={1.25} factor={2}>
+      <Divider speed={0.2} offset={1.3} factor={3}>
         <UpDown>
           <SVG icon="box" width={6} fill={colors.white} left="85%" top="75%" />
           <SVG
@@ -518,9 +543,9 @@ const Index = () => (
         bg="#23262b"
         clipPath="polygon(0 16%, 100% 4%, 100% 82%, 0 94%)"
         speed={0.2}
-        offset={3.5}
+        offset={3}
       />
-      <Divider speed={0.1} offset={3.3}>
+      <Divider speed={0.1} offset={3}>
         <UpDown>
           <SVG
             icon="box"
@@ -610,7 +635,7 @@ const Index = () => (
           top="70%"
         />
       </Divider>
-      <Content speed={0.4} offset={3.3}>
+      <Content speed={0.4} offset={4}>
         <Inner>
           <Title>About</Title>
           <AboutHero>
@@ -640,7 +665,72 @@ const Index = () => (
           </a>
         </Inner>
       </Content>
-      <Divider fill="#23262b" speed={0.2} offset={4.35}>
+      <Divider speed={0.1} offset={4}>
+        <UpDown>
+          <SVG
+            icon="upDown"
+            className={hidden}
+            width={8}
+            fill={colors["grey-darkest"]}
+            left="70%"
+            top="20%"
+          />
+          <SVG
+            icon="triangle"
+            width={8}
+            stroke={colors["grey-darkest"]}
+            left="25%"
+            top="5%"
+          />
+        </UpDown>
+        <UpDownWide>
+          <SVG
+            icon="triangle"
+            width={12}
+            stroke={colors.white}
+            left="95%"
+            top="50%"
+          />
+          <SVG
+            icon="circle"
+            width={6}
+            fill={colors.white}
+            left="85%"
+            top="15%"
+          />
+          <SVG
+            icon="upDown"
+            className={hidden}
+            width={8}
+            fill={colors["grey-darkest"]}
+            left="45%"
+            top="10%"
+          />
+        </UpDownWide>
+        <SVG icon="circle" width={6} fill={colors.white} left="4%" top="20%" />
+        <SVG
+          icon="circle"
+          width={12}
+          fill={colors["grey-darkest"]}
+          left="70%"
+          top="60%"
+        />
+        <SVG
+          icon="box"
+          width={12}
+          fill={colors["grey-darkest"]}
+          left="20%"
+          top="30%"
+        />
+        <SVG
+          icon="hexa"
+          width={8}
+          stroke={colors["grey-darkest"]}
+          left="80%"
+          top="70%"
+        />
+      </Divider>
+      <Divider fill="#23262b" speed={0.2} offset={5}>
         <WaveWrapper>
           <InnerWave>
             <svg
@@ -660,7 +750,7 @@ const Index = () => (
           </InnerWave>
         </WaveWrapper>
       </Divider>
-      <Content speed={0.4} offset={4.35}>
+      <Content speed={0.4} offset={5}>
         <Inner>
           <Title>Get in touch</Title>
           <ContactText>
@@ -673,7 +763,7 @@ const Index = () => (
         </Inner>
         <Footer>&copy; 2018 by Gatsby Starter Portfolio Cara.</Footer>
       </Content>
-      <Divider speed={0.1} offset={4.25}>
+      <Divider speed={0.1} offset={5}>
         <UpDown>
           <SVG
             icon="upDown"
