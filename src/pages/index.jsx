@@ -359,7 +359,7 @@ const Index = () => (
             {/* Project */}
             <ProjectCard
               title="Connie's Country Western Pub"
-              link="https://conniespub.netlify.com/"
+              link="https://www.conniescountrywesternpub.com/"
               bg="linear-gradient(to right, #009245 0%, #FCEE21 100%)"
             >
               Connie is a hard working entrepenuer in Negril, Jamaica and one of
