@@ -450,6 +450,25 @@ const Index = () => (
                 GitHub
               </a>
             </ProjectCard>
+            {/* Project */}
+            <ProjectCard
+              title="Chuck Norris"
+              link="https://chucknorris.jamesonb.com/"
+              bg="linear-gradient(to right, #D585FF 0%, #00FFEE 100%)"
+            >
+              This is a Chuck Norris joke/saying generator. You can customize
+              the name used in the sayings to be your own or another actor,
+              artist, friend, coworker, etc. Built with React and RESTful API.
+              <br />
+              <br />
+              <a
+                href="https://github.com/Jameson13B/chuck_norris_generator"
+                target="_blank"
+                style={{ color: "white", fontWeight: "bold" }}
+              >
+                GitHub
+              </a>
+            </ProjectCard>
           </ProjectsWrapper>
         </Inner>
       </Content>
